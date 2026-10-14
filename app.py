@@ -28,22 +28,60 @@ section = st.sidebar.selectbox(
     ["Overview", "Classification", "Regression", "Clustering"]
 )
 
+
 if section == "Overview":
     st.subheader("Project Overview")
-    st.markdown("""
-    - **Classification:** Compare classification algorithms.
-    - **Regression:** Evaluate regression models.
-    - **Clustering:** Explore customer clusters.
-    - **Evaluation:** Review model metrics and visualizations.
-    """)
+    st.write(
+        "Compare machine learning algorithms across "
+        "classification, regression, and clustering tasks."
+    )
 
     result_file = results_dir / "model_comparison.csv"
+
     if result_file.exists():
         df = pd.read_csv(result_file)
-        st.subheader("Model Comparison Results")
-        st.dataframe(df, use_container_width=True)
+
+        if "Task" in df.columns and "Algorithm" in df.columns:
+            classification_df = df[
+                df["Task"].astype(str).str.contains(
+                    "Classification", case=False, na=False
+                )
+            ]
+
+            total_models = len(classification_df)
+            st.metric("Classification Models", total_models)
+
+            if (
+                not classification_df.empty
+                and "Accuracy" in classification_df.columns
+            ):
+                accuracy = pd.to_numeric(
+                    classification_df["Accuracy"],
+                    errors="coerce"
+                ).dropna()
+
+                if not accuracy.empty:
+                    st.metric(
+                        "Best Classification Accuracy",
+                        f"{accuracy.max():.1%}"
+                    )
+
+            st.subheader("Project Areas")
+            st.markdown("""
+            - **Classification:** Compare predictive model performance.
+            - **Regression:** Evaluate continuous-value predictions.
+            - **Clustering:** Explore customer groups using age and salary.
+            """)
+
+            st.subheader("Model Results")
+            st.dataframe(df, use_container_width=True)
+        else:
+            st.warning(
+                "The results file does not contain the expected columns."
+            )
     else:
-        st.warning("The results/model_comparison.csv file was not found.")
+        st.warning("The model comparison results file was not found.")
+
 
 
 elif section == "Classification":
@@ -98,7 +136,48 @@ elif section == "Regression":
             st.warning("No regression results were found.")
     else:
         st.warning("Regression results are not available.")
+        
+elif section == "Clustering":
+    st.subheader("Customer Clustering")
 
+    cluster_file = results_dir / "customer_clusters.csv"
+
+    if cluster_file.exists():
+        cluster_df = pd.read_csv(cluster_file)
+
+        st.write("Explore customer groups based on age and estimated salary.")
+
+        st.metric("Total Customer Records", len(cluster_df))
+
+        if "Cluster" in cluster_df.columns:
+            st.subheader("Customers by Cluster")
+            st.bar_chart(cluster_df["Cluster"].value_counts().sort_index())
+
+        st.subheader("Customer Cluster Data")
+        st.dataframe(
+            cluster_df.head(100),
+            use_container_width=True
+        )
+
+        if {"Age", "EstimatedSalary", "Cluster"}.issubset(cluster_df.columns):
+            st.subheader("Cluster Visualization")
+            fig, ax = plt.subplots()
+            for cluster_id, group in cluster_df.groupby("Cluster"):
+                ax.scatter(
+                    group["Age"],
+                    group["EstimatedSalary"],
+                    label=f"Cluster {cluster_id}",
+                    alpha=0.7
+                )
+
+            ax.set_xlabel("Age")
+            ax.set_ylabel("Estimated Salary")
+            ax.set_title("Customer Segments")
+            ax.legend()
+            st.pyplot(fig)
+            plt.close(fig)
+    else:
+        st.error("The file results/customer_clusters.csv was not found.")
 
 st.divider()
 st.caption("Built with Python, Pandas, Matplotlib, and Streamlit.")
