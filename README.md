@@ -1,37 +1,139 @@
-# ML Algorithm Comparison: Classification, Boosting, Clustering and Regression
+# 🤖 Machine Learning Algorithm Comparison
 
-This repository demonstrates machine-learning workflows using three supplied datasets.
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10+-blue?logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/Machine%20Learning-Model%20Comparison-orange" alt="Machine Learning">
+  <img src="https://img.shields.io/badge/Streamlit-Live%20Dashboard-FF4B4B?logo=streamlit&logoColor=white" alt="Streamlit">
+  <img src="https://img.shields.io/badge/Status-Completed-success" alt="Project Status">
+</p>
 
-## Datasets
-- `Social_Network_Ads.csv`: classification (`Purchased`) and K-Means clustering (`Age`, `EstimatedSalary`).
-- `insurance_pre.csv`: regression to estimate `charges`.
-- `Salary_Data.csv`: regression to estimate `Salary` from `YearsExperience`.
+## 🚀 Live Demo
 
-## Algorithms
-- Classification: Logistic Regression, Decision Tree, Random Forest.
-- Boosting: AdaBoost, Gradient Boosting.
-- Clustering: K-Means (2 clusters).
-- Regression: Linear Regression, Random Forest Regressor, Gradient Boosting Regressor.
+**[Click here to explore the live dashboard]((https://ml-algorithm-comparison.streamlit.app/))**
 
-## Evaluation
-- Classification: accuracy, precision, recall, F1-score.
-- Clustering: silhouette score and inertia.
-- Regression: MAE, RMSE, R².
+An interactive dashboard for exploring machine learning model performance, regression metrics, and customer clustering results.
 
-## Run locally
-Python 3.10+ is recommended.
+## 📌 About the Project
+
+Machine Learning Algorithm Comparison is a Python-based project designed to evaluate and compare different machine learning algorithms across classification, regression, and clustering tasks.
+
+The project presents model evaluation results through tables and visualizations. A Streamlit dashboard makes it easy to explore the results directly in a web browser.
+
+## ✨ Features
+
+- Classification model comparison
+- Regression model evaluation
+- Customer segmentation using K-Means clustering
+- Classification accuracy visualization
+- Interactive model results tables
+- Customer cluster visualization
+- Web-based dashboard using Streamlit
+
+## 🛠️ Technologies Used
+
+- **Language:** Python
+- **Machine Learning:** Scikit-learn
+- **Data Processing:** Pandas, NumPy
+- **Visualization:** Matplotlib
+- **Dashboard:** Streamlit
+- **Tools:** VS Code, Git, GitHub
+
+## 📊 Algorithms Implemented
+
+### Classification
+- Logistic Regression
+- Decision Tree
+- Random Forest
+- AdaBoost
+- Gradient Boosting
+
+### Regression
+- Linear Regression
+- Random Forest Regressor
+- Gradient Boosting Regressor
+
+### Clustering
+- K-Means Clustering
+- Customer segmentation based on Age and Estimated Salary
+
+## 📈 Results and Visualizations
+
+The project includes model evaluation results and generated visualizations.
+
+- Classification: Accuracy, Precision, Recall, and F1-score
+- Regression: Mean Absolute Error (MAE), Root Mean Squared Error (RMSE), and R² score
+- Clustering: Customer cluster assignments and cluster visualization
+
+## 🖥️ Dashboard Sections
+
+- **Overview:** Project introduction and model comparison summary
+- **Classification:** Classification metrics and accuracy graph
+- **Regression:** Regression model evaluation results
+- **Clustering:** Customer records, cluster counts, and scatter plot
+
+## 📂 Project Structure
+
+```text
+ML-Algorithm-Comparison/
+│
+├── app.py
+├── src/
+│   └── train_models.py
+├── results/
+│   ├── model_comparison.csv
+│   ├── customer_clusters.csv
+│   └── classification_accuracy.png
+├── requirements.txt
+└── README.md
+```
+
+*The repository may contain additional datasets and source files.*
+
+## ⚙️ Installation and Setup
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/RakshitaMahesh/ML-Algorithm-Comparison.git
+```
+
+### 2. Navigate to the project folder
+
+```bash
+cd ML-Algorithm-Comparison
+```
+
+### 3. Install dependencies
 
 ```bash
 pip install -r requirements.txt
-python src/train_models.py
 ```
 
-The script saves comparison metrics to `results/model_comparison.csv`, clustering assignments to
-`results/customer_clusters.csv`, and the classification accuracy chart to
-`results/classification_accuracy.png`.
+### 4. Run the Streamlit dashboard
 
-## Important notes
-- The test split is 20%, with `random_state=42` for repeatability.
-- `User ID` is excluded from prediction because it is an identifier, not a meaningful predictive feature.
-- Clustering does not use the `Purchased` label; it groups records using standardized `Age` and `EstimatedSalary`.
-- Metrics depend on the split and dataset. Do not describe them as guaranteed performance on new data.
+```bash
+streamlit run app.py
+```
+
+The dashboard will open in your browser.
+
+## 🎯 Learning Outcomes
+
+- Understanding classification, regression, and clustering techniques
+- Comparing machine learning algorithms using evaluation metrics
+- Interpreting model performance
+- Visualizing customer segments
+- Developing interactive machine learning dashboards
+
+## 👩‍💻 Author
+
+**Rakshita Mahesh**
+
+CSE (AI & ML) Student  
+AMC Engineering College
+
+GitHub: [RakshitaMahesh](https://github.com/RakshitaMahesh)
+
+---
+
+⭐ If you find this project useful, consider starring the repository.
