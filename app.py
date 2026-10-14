@@ -161,7 +161,7 @@ elif section == "Clustering":
 
         if {"Age", "EstimatedSalary", "Cluster"}.issubset(cluster_df.columns):
             st.subheader("Cluster Visualization")
-            fig, ax = plt.subplots()
+            fig, ax = plt.subplots(figsize=(8, 4))
             for cluster_id, group in cluster_df.groupby("Cluster"):
                 ax.scatter(
                     group["Age"],
@@ -174,7 +174,7 @@ elif section == "Clustering":
             ax.set_ylabel("Estimated Salary")
             ax.set_title("Customer Segments")
             ax.legend()
-            st.pyplot(fig)
+            st.pyplot(fig, use_container_width=False)
             plt.close(fig)
     else:
         st.error("The file results/customer_clusters.csv was not found.")
