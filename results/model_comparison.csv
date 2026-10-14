@@ -1,0 +1,11 @@
+Dataset,Task,Algorithm,Accuracy,Precision,Recall,F1-score,MAE,RMSE,R2,Silhouette score,Inertia
+Social Network Ads,Classification/Boosting,Logistic Regression,0.8125,0.8181818181818182,0.6206896551724138,0.7058823529411765,,,,,
+Social Network Ads,Classification/Boosting,Decision Tree,0.825,0.7419354838709677,0.7931034482758621,0.7666666666666667,,,,,
+Social Network Ads,Classification/Boosting,Random Forest,0.9,0.8387096774193549,0.896551724137931,0.8666666666666667,,,,,
+Social Network Ads,Classification/Boosting,AdaBoost,0.875,0.8518518518518519,0.7931034482758621,0.8214285714285714,,,,,
+Social Network Ads,Classification/Boosting,Gradient Boosting,0.9,0.8387096774193549,0.896551724137931,0.8666666666666667,,,,,
+Insurance,Regression,Linear Regression,,,,,4213.48479780714,5829.17293025419,0.7811302113434095,,
+Insurance,Regression,Random Forest Regressor,,,,,2532.7023974375497,4681.59827918563,0.8588242091444385,,
+Insurance,Regression,Gradient Boosting Regressor,,,,,2424.53178305059,4342.913818437272,0.8785117259694142,,
+Salary Data,Regression,Linear Regression,,,,,6286.453830757749,7059.04362190151,0.9024461774180497,,
+Social Network Ads,Clustering,K-Means (k=2),,,,,,,,0.3829875894215638,504.6901975495462
