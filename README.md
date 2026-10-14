@@ -76,23 +76,26 @@ The project includes model evaluation results and generated visualizations.
 ## 📸 Screenshots
 
 ### Overview
-![Dashboard Overview](screenshots/overview.png)
+
+![Dashboard Overview](./screenshots/overview.png)
 
 ### Classification
-![Classification Results](screenshots/classification1.png)
 
-![Classification Comparison](screenshots/classification2.png)
+![Classification Results](./screenshots/classification1.png)
+
+![Classification Comparison](./screenshots/classification2.png)
 
 ### Regression
-![Regression Results](screenshots/regression.png)
+
+![Regression Results](./screenshots/regression.png)
 
 ### Customer Clustering
-![Customer Clustering](screenshots/clustering1.png)
 
-![Customer Clusters](screenshots/clustering2.png)
+![Customer Clustering](./screenshots/clustering1.png)
 
-![Clustering Visualization](screenshots/clustering3.png)
+![Customer Clusters](./screenshots/clustering2.png)
 
+![Clustering Visualization](./screenshots/clustering3.png)
 ## 📂 Project Structure
 
 ```text
