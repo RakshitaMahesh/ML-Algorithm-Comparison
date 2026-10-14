@@ -63,26 +63,27 @@ elif section == "Classification":
     else:
         st.warning("Classification results are not available.")
 
+
 elif section == "Regression":
     st.subheader("Regression Results")
     result_file = results_dir / "model_comparison.csv"
 
     if result_file.exists():
         df = pd.read_csv(result_file)
-        st.dataframe(df, use_container_width=True)
+
+        regression_df = df[
+            df["Task"].astype(str).str.contains(
+                "Regression", case=False, na=False
+            )
+        ]
+
+        if not regression_df.empty:
+            st.dataframe(regression_df, use_container_width=True)
+        else:
+            st.warning("No regression results were found.")
     else:
         st.warning("Regression results are not available.")
 
-elif section == "Clustering":
-    st.subheader("Customer Clustering")
-    cluster_file = results_dir / "customer_clusters.csv"
-
-    if cluster_file.exists():
-        df = pd.read_csv(cluster_file)
-        st.dataframe(df.head(100), use_container_width=True)
-        st.caption("Showing up to the first 100 customer records.")
-    else:
-        st.warning("The customer_clusters.csv file was not found.")
 
 st.divider()
 st.caption("Built with Python, Pandas, Matplotlib, and Streamlit.")
