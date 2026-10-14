@@ -73,6 +73,20 @@ The project includes model evaluation results and generated visualizations.
 - **Regression:** Regression model evaluation results
 - **Clustering:** Customer records, cluster counts, and scatter plot
 
+ ## 📸 Screenshots
+
+### Overview
+![Dashboard Overview](screenshots/overview.png)
+
+### Classification
+![Classification Results](screenshots/classification.png)
+
+### Regression
+![Regression Results](screenshots/regression.png)
+
+### Customer Clustering
+![Customer Clustering](screenshots/clustering.png)
+
 ## 📂 Project Structure
 
 ```text
@@ -136,6 +150,4 @@ AMC Engineering College
 
 GitHub: [RakshitaMahesh](https://github.com/RakshitaMahesh)
 
----
 
-⭐ If you find this project useful, consider starring the repository.
