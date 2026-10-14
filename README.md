@@ -9,7 +9,9 @@
 
 ## 🚀 Live Demo
 
-**[Click here to explore the live dashboard](https://ml-algorithm-comparison-wkb8nl8wsxoiiag5qsy1h.streamlit.app/)**
+**[Click here to explore the live dashboard](https://ml-algorithm-comparison-wkb8nl8wsxoiriag5qsylh.streamlit.app/)**
+
+An interactive dashboard for exploring machine learning model performance, regression metrics, and customer clustering results.
 
 An interactive dashboard for exploring machine learning model performance, regression metrics, and customer clustering results.
 
