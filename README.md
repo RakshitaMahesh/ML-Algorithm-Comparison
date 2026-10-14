@@ -76,26 +76,23 @@ The project includes model evaluation results and generated visualizations.
 ## 📸 Screenshots
 
 ### Overview
-
-![Dashboard Overview](https://raw.githubusercontent.com/RakshitaMahesh/ML-Algorithm-Comparison/main/screenshots/overview.png)
+<img src="https://raw.githubusercontent.com/RakshitaMahesh/ML-Algorithm-Comparison/refs/heads/main/screenshots/overview.png" alt="Dashboard Overview" width="800"/>
 
 ### Classification
+<img src="https://raw.githubusercontent.com/RakshitaMahesh/ML-Algorithm-Comparison/refs/heads/main/screenshots/classification1.png" alt="Classification Results" width="800"/>
 
-![Classification Results](./screenshots/classification1.png)
-
-![Classification Comparison](./screenshots/classification2.png)
+<img src="https://raw.githubusercontent.com/RakshitaMahesh/ML-Algorithm-Comparison/refs/heads/main/screenshots/classification2.png" alt="Classification Comparison" width="800"/>
 
 ### Regression
-
-![Regression Results](./screenshots/regression.png)
+<img src="https://raw.githubusercontent.com/RakshitaMahesh/ML-Algorithm-Comparison/refs/heads/main/screenshots/regression.png" alt="Regression Results" width="800"/>
 
 ### Customer Clustering
+<img src="https://raw.githubusercontent.com/RakshitaMahesh/ML-Algorithm-Comparison/refs/heads/main/screenshots/clustering1.png" alt="Customer Clustering" width="800"/>
 
-![Customer Clustering](./screenshots/clustering1.png)
+<img src="https://raw.githubusercontent.com/RakshitaMahesh/ML-Algorithm-Comparison/refs/heads/main/screenshots/clustering2.png" alt="Customer Cluster Data" width="800"/>
 
-![Customer Clusters](./screenshots/clustering2.png)
+<img src="https://raw.githubusercontent.com/RakshitaMahesh/ML-Algorithm-Comparison/refs/heads/main/screenshots/clustering3.png" alt="Clustering Visualization" width="800"/>
 
-![Clustering Visualization](./screenshots/clustering3.png)
 ## 📂 Project Structure
 
 ```text
