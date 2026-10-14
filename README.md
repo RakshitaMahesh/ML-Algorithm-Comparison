@@ -73,19 +73,25 @@ The project includes model evaluation results and generated visualizations.
 - **Regression:** Regression model evaluation results
 - **Clustering:** Customer records, cluster counts, and scatter plot
 
- ## 📸 Screenshots
+## 📸 Screenshots
 
 ### Overview
 ![Dashboard Overview](screenshots/overview.png)
 
 ### Classification
-![Classification Results](screenshots/classification.png)
+![Classification Results](screenshots/classification1.png)
+
+![Classification Comparison](screenshots/classification2.png)
 
 ### Regression
 ![Regression Results](screenshots/regression.png)
 
 ### Customer Clustering
-![Customer Clustering](screenshots/clustering.png)
+![Customer Clustering](screenshots/clustering1.png)
+
+![Customer Clusters](screenshots/clustering2.png)
+
+![Clustering Visualization](screenshots/clustering3.png)
 
 ## 📂 Project Structure
 
