@@ -45,23 +45,38 @@ if section == "Overview":
     else:
         st.warning("The results/model_comparison.csv file was not found.")
 
+
 elif section == "Classification":
     st.subheader("Classification Results")
     result_file = results_dir / "model_comparison.csv"
 
     if result_file.exists():
         df = pd.read_csv(result_file)
-        st.dataframe(df, use_container_width=True)
 
-        plot_file = results_dir / "classification_accuracy.png"
-        if plot_file.exists():
-            st.image(
-                str(plot_file),
-                caption="Classification Model Comparison",
+        classification_df = df[
+            df["Task"].astype(str).str.contains(
+                "Classification", case=False, na=False
+            )
+        ]
+
+        if not classification_df.empty:
+            st.dataframe(
+                classification_df,
                 use_container_width=True
             )
+
+            plot_file = results_dir / "classification_accuracy.png"
+            if plot_file.exists():
+                st.image(
+                    str(plot_file),
+                    caption="Classification Model Accuracy",
+                    use_container_width=True
+                )
+        else:
+            st.warning("No classification results were found.")
     else:
         st.warning("Classification results are not available.")
+
 
 
 elif section == "Regression":
