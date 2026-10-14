@@ -77,7 +77,7 @@ The project includes model evaluation results and generated visualizations.
 
 ### Overview
 
-![Dashboard Overview](./screenshots/overview.png)
+![Dashboard Overview](https://raw.githubusercontent.com/RakshitaMahesh/ML-Algorithm-Comparison/main/screenshots/overview.png)
 
 ### Classification
 
